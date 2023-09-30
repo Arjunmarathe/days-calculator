@@ -1,0 +1,54 @@
+<html>
+        <body><html>
+    <head>
+        <title> Web page </title>
+        </head>
+        <body>
+            <hr>
+              <center>
+                  <h3> Codeyoung: Calcuate days beetween dates
+                      <br> <br> </h3>
+
+                      <p align="center"> <b> Enter date1 </b>
+                      <input type="date" id="dateInput1">
+                      <br> <br>
+                      <b> Enter date2 </b>
+                      <input type="date" id="dateInput2">
+                      <br> <br>
+
+                      <button onclick="daysDiffrence()">
+                      Calcuate number of days
+                      </button>
+                      <p id="result"></p>
+            </body>
+            </html></body>
+        <style>body{
+    background-color:linen;
+}
+h3{
+    background-color: blue;
+    color:white;
+}
+</style>
+        <script>function daysDiffrence()  {
+    var dateI1 = document.getElementById("dateInput1").value;
+     var dateI2 = document.getElementById("dateInput2").value;
+
+
+     var date1 = new Date (dateI1);
+     var date2 = new Date (dateI2);
+
+     var time_diffrence = date2.getTime() - date1.getTime();
+
+
+
+      var result = time_diffrence / (1000 * 60 * 60 * 24);
+
+
+      return document.getElementById("result").innerHTML = result + " days beetween both dates. ";
+
+}
+
+
+</script>
+      </html>
